@@ -433,4 +433,6 @@ Result:
 PASS: 6/6
 ```
 
+<img width="624" height="382" alt="image" src="https://github.com/user-attachments/assets/bcbfcad1-48ec-4438-a897-d2f24b7af61a" />
+
 All compliance policies successfully validated both compliant and non-compliant Terraform plans.
