@@ -4,7 +4,7 @@
 
 In Week 1, I built a compliant AWS S3 bucket using Terraform. In Week 2, I shifted from building controls to validating them automatically using Policy-as-Code.
 
-The objective of this project was to use * **Open Policy Agent (OPA)** and * **Rego** to evaluate Terraform plans against * **NIST 800-53**  compliance requirements. Instead of manually reviewing infrastructure and claiming it is compliant, these policies provide an automated pass/fail decision based on defined controls.
+The objective of this project was to use  **Open Policy Agent (OPA)** and  **Rego** to evaluate Terraform plans against **NIST 800-53**  compliance requirements. Instead of manually reviewing infrastructure and claiming it is compliant, these policies provide an automated pass/fail decision based on defined controls.
 
 ## Controls Validated
 
