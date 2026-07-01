@@ -221,6 +221,8 @@ planned_values.root_module.resources
 ```
 
 contains the actual values.
+
+
 <img width="394" height="371" alt="image" src="https://github.com/user-attachments/assets/c4aad89e-2a30-4932-9335-d261d9b2225a" />
 
 ### Policy Logic
@@ -231,25 +233,7 @@ The policy:
 2. Reads the actual boolean values from planned values.
 3. Verifies all four settings equal `true`.
 
-### Debugging
 
-The first implementation incorrectly attempted to validate:
-
-```rego
-pab.expressions.block_public_acls.constant_value
-```
-
-The tests revealed those values were stored under:
-
-```rego
-planned.values.block_public_acls
-```
-
-After updating the policy, the AC-3 tests passed.
-
-### Screenshot
-
-![AC3 Debugging](./screenshots/05-ac3-debugging.png)
 
 ---
 
@@ -289,15 +273,7 @@ The policy:
 3. Calculates missing tags.
 4. Generates a denial message when required tags are absent.
 
-### Example Denial Message
 
-```text
-CM-6 violation: resource 'aws_s3_bucket.primary' is missing required tags.
-```
-
-### Screenshot
-
-![CM6 Debugging](./screenshots/06-cm6-debugging.png)
 
 ---
 
