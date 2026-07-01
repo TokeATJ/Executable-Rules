@@ -35,7 +35,7 @@ OPA is the engine responsible for evaluating Rego policies and executing complia
 
 Initially, OPA was not installed on my system. I went to the OPA website to download the correct executables
 
-[https://github.com/open-policy-agent/opa/releases?utm_source=chatgpt.com](https://github.com/open-policy-agent/opa/releases/latest)
+[https://github.com/open-policy-agent/opa/release/latest](https://github.com/open-policy-agent/opa/releases/latest)
 
 Downloaded binary:
 
