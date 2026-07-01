@@ -142,6 +142,9 @@ aws_s3_bucket.primary.id
 
 This meant resources needed to be matched by reference rather than value.
 
+<img width="455" height="270" alt="image" src="https://github.com/user-attachments/assets/9ebaa6f7-bfa5-4208-b452-8fd01d0364c0" />
+
+
 ### Policy Logic
 
 ```rego
@@ -182,31 +185,7 @@ not encrypted_bucket(bucket)
 
 converted the policy from a placeholder into a real compliance control.
 
-### Debugging
-
-OPA initially returned:
-
-```text
-rego_compile_error: var ref declared above
-```
-
-Root Cause:
-
-```rego
-some ref
-
-ref := ...
-```
-
-Resolution:
-
-Removed the duplicate declaration and allowed Rego to infer the variable assignment.
-
-### Screenshot
-
-![SC28 Debugging](./screenshots/04-sc28-debugging.png)
-
----
+--
 
 # Step 6: Building the AC-3 Public Access Policy
 
@@ -242,6 +221,7 @@ planned_values.root_module.resources
 ```
 
 contains the actual values.
+<img width="394" height="371" alt="image" src="https://github.com/user-attachments/assets/c4aad89e-2a30-4932-9335-d261d9b2225a" />
 
 ### Policy Logic
 
@@ -297,6 +277,8 @@ The test fixture showed tags were stored under:
 ```rego
 values.tags_all
 ```
+<img width="310" height="259" alt="image" src="https://github.com/user-attachments/assets/8bd67c32-a8f9-4e3c-9379-9d95e94f6f53" />
+
 
 ### Policy Logic
 
@@ -338,7 +320,8 @@ FAIL: 2/6
 
 ### Screenshot
 
-![Initial Test Results](./screenshots/07-pass-4-of-6.png)
+<img width="624" height="320" alt="image" src="https://github.com/user-attachments/assets/116e6e9d-e6a6-4558-a4fb-fdb6cafd4f31" />
+
 
 After correcting the AC-3 and CM-6 policies:
 
@@ -350,7 +333,7 @@ PASS: 6/6
 
 ### Screenshot
 
-![All Tests Passing](./screenshots/08-pass-6-of-6.png)
+<img width="624" height="382" alt="image" src="https://github.com/user-attachments/assets/bcbfcad1-48ec-4438-a897-d2f24b7af61a" />
 
 ---
 
@@ -433,6 +416,6 @@ Result:
 PASS: 6/6
 ```
 
-<img width="624" height="382" alt="image" src="https://github.com/user-attachments/assets/bcbfcad1-48ec-4438-a897-d2f24b7af61a" />
+
 
 All compliance policies successfully validated both compliant and non-compliant Terraform plans.
