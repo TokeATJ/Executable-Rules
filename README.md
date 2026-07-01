@@ -52,13 +52,6 @@ To enable OPA to be executed globally from PowerShell, I added the directory con
 
 ## Step 2: Downloading and Configuring OPA
 
-
-Downloaded binary:
-
-```text
-opa_windows_amd64.exe
-```
-
 Renamed:
 
 ```text
@@ -68,7 +61,7 @@ opa.exe
 Stored in:
 
 ```text
-C:\Users\tokea\tools
+C:\Users\XXXX\tools
 ```
 
 ---
@@ -90,9 +83,10 @@ Usage:
 opa [command]
 ```
 
-### Screenshot
+### Screenshot to Validate OPA Installation
 
-![OPA Installed](./screenshots/03-opa-installed.png)
+<img width="478" height="358" alt="image" src="https://github.com/user-attachments/assets/00a867b4-8f24-4116-aeb3-fdcce07d0117" />
+
 
 This confirmed:
 
